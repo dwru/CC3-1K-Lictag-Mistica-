@@ -4,20 +4,19 @@ import java.util.Scanner;
  
 public class MeanModeLictagMistica {
 
-   static int size ;
+   static int dtasize ;
 
-   static int [] set;
+   static int [] dtaset;
 
-   
-   
-     
     public static void main(String[] args) {
     
        Users ();
        
-        System.out.println("Mean = "+ means());
+        System.out.println("_____________________");
+       
+        System.out.println("Mean = "+ mean());
         
-        System.out.println("Mode = " + modes());
+        System.out.println("Mode = " + mode());
         
     
 }   public static void Users(){
@@ -26,38 +25,42 @@ public class MeanModeLictagMistica {
   
             System.out.println("Enter data set: ");
             
-            size = sc.nextInt();
+            dtasize = sc.nextInt();
           
-            set = new int [size];
+            dtaset = new int [dtasize];
             
-            for (int i =0; i<set.length; i++){
+            System.out.println("Enter data:");   
             
-                 set[i]= sc.nextInt();}
+            for (int i =0; i<dtaset.length; i++){
+            
+            System.out.print("Data "+ (i+1) + ":  ");
+            
+                 dtaset[i]= sc.nextInt();}
                  
- }     public static int means() {
+ }     public static double mean() {
  
-      int sum = 0;
+      double sum = 0;
       
-      for (int i = 0; i<set.length; i++) {
+      for (int i = 0; i<dtaset.length; i++) {
       
-      sum += set[i];}
+      sum += dtaset[i];}
       
-      sum /= set.length;
+      sum /= dtaset.length;
       
       return sum;
  
  
- } public static int modes(){
+ } public static int mode(){
  
  int mode = 0, maxCount = 0;
  
- for (int i = 0; i<set.length; i++){
+ for (int i = 0; i<dtaset.length; i++){
  
      int count = 0;
      
-     for (int j = 0; j < set.length; j++){
+     for (int j = 0; j < dtaset.length; j++){
      
-     if (set[i] == set[j]){count++;}
+     if (set[i] == dtaset[j]){count++;}
      
        }
        
@@ -65,7 +68,7 @@ public class MeanModeLictagMistica {
      
      maxCount = count;
      
-     mode = set[i];        }
+     mode = dtaset[i];        }
      
  }
  
