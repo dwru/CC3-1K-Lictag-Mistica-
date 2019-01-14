@@ -76,7 +76,7 @@ public class MeanModeLictagMistica {
      
  }
  
- return modes;       
+ return mode;       
  
  }
 
